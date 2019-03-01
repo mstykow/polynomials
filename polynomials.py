@@ -42,3 +42,9 @@ class polynomial():
         for i, coefficient in enumerate(self.coefficients):
             result = result + coefficient * x ** i
         return result
+
+    def __eq__(self, other):
+        return self.coefficients == other.coefficients
+
+    def __ne__(self, other):
+        return not self == other

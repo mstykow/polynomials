@@ -37,3 +37,8 @@ def test_evaluate():
     assert poly3.evaluate(2) == 0, 'poly3 did not evaluate correctly at 2'
     assert poly4.evaluate(0) == 3, 'poly4 did not evaluate correctly at 0'
     assert poly4.evaluate(2) == 5, 'poly4 did not evaluate correctly at 2'
+
+def test_equality():
+    poly5 = polynomial([1, 2, 3])
+    assert poly1 == poly5, "something's wrong with the equality operation"
+    assert poly1 != poly2, "something's wrong with the equality operation"
