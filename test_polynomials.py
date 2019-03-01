@@ -1,5 +1,5 @@
 #! python3
-# This is the unit test for OOP_exercise2.py
+# This is the unit test for polynomials.py
 
 from polynomials import polynomial
 
