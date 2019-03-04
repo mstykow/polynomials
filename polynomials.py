@@ -43,8 +43,14 @@ class polynomial():
             result = result + coefficient * x ** i
         return result
 
+    # When comparing two objects, we need to override the default behavior of the
+    # equality operator, which would be comparing object IDs, to explicitly compare
+    # all the attributes a class contains (__dict__ is a dictionary of all the
+    # object's attributes and their values)
     def __eq__(self, other):
-        return self.coefficients == other.coefficients
+        #return self.coefficients == other.coefficients
+        return self.__dict__ == other.__dict__
 
+    # Note that the "not equal" operator also needs to be redefined
     def __ne__(self, other):
         return not self == other
